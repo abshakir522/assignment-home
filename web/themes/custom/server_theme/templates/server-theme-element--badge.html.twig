@@ -1,0 +1,13 @@
+{% if bg_color == 'green' %}
+  {% set bg_color_class = 'bg-green-100' %}
+  {% set color_class = 'text-green-800' %}
+{% endif %}
+
+{% set classes = [
+  color_class,
+  bg_color_class,
+] | join(' ') | trim %}
+
+<span class="inline-block mt-2 w-fit px-3 py-1 text-xs font-medium rounded-full {{ classes }}">
+  {{ content }}
+</span>

@@ -195,7 +195,7 @@ class StyleGuideController extends ControllerBase {
     $build[] = $this->wrapElementNoContainer($element, 'Element: People teasers');
 
     $element = $this->getPersonCard();
-    $build[] = $this->wrapElementWideContainer($element, 'Element: Person card');
+    $build[] = $this->wrapElementWideContainer($this->buildCards($element), 'Element: Person card');
 
     $element = $this->getPersonCards();
     $build[] = $this->wrapElementNoContainer($element, 'Element: 10 Person cards');
@@ -311,9 +311,10 @@ class StyleGuideController extends ControllerBase {
    */
   protected function getPersonCard(): array {
     return $this->buildElementPersonCard(
-      $this->getPlaceholderPersonImage(100),
+      $this->getPlaceholderPersonImage(128),
       "Jane Cooper",
-      "Paradigm Representative"
+      "Paradigm Representative",
+      "Admin"
     );
   }
 
@@ -341,9 +342,10 @@ class StyleGuideController extends ControllerBase {
 
     foreach ($names as $name) {
       $items[] = $this->buildElementPersonCard(
-        $this->getPlaceholderPersonImage(100),
+        $this->getPlaceholderPersonImage(128),
         $name,
-        "Paradigm Representative"
+        "Paradigm Representative",
+        "Admin"
       );
     }
 
