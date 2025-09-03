@@ -266,6 +266,22 @@ function server_theme_theme() {
     ],
   ];
 
+  // A Person card.
+  $info['server_theme_element__person_card'] = [
+    'variables' => [
+      'elements' => NULL,
+      'email' => NULL,
+      'phone' => NULL,
+    ],
+  ];
+
+  $info['server_theme_element__badge'] = [
+    'variables' => [
+      'content' => NULL,
+      'bg_color' => NULL,
+    ],
+  ];
+
   // A single Button.
   $info['server_theme_button'] = [
     'variables' => [
